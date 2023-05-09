@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth System</title>
+    <style>
+      body {
+        background-color: #27262c;
+        color: #ffffff;
+        font-family: monospace;
+      }
+      .bg {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        background-color: #4044ed;
+        color: #ffffff;
+        padding: 1rem;
+        width: 12rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-family: monospace;
+      }
+      .btn:hover {
+        opacity: 0.5;
+      }
+
+      .link {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: monospace;
+        font-size: 2rem;
+      }
+      .input-field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      input {
+        border: none;
+        padding: 1rem;
+        background-color: transparent;
+        border-bottom: 2px solid white;
+      }
+      .heading {
+        font-size: 4rem;
+        font-family: monospace;
+      }
+      .input-text {
+        color: #ffffff;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <h1 class="heading">Register</h1>
+      <form action="/register" method="POST">
+        <div class="input-field">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="input-text"
+          />
+        </div>
+        <div class="input-field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="input-text"
+          />
+        </div>
+        <div class="input-field">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            class="input-text"
+          />
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+      <a href="/login" class="link">Login</a>
+    </div>
+  </body>
+</html>
