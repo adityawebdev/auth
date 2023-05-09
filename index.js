@@ -1,7 +1,3 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
-
 const express = require("express");
 const app = express();
 const bcrypt = require("bcrypt");
@@ -24,7 +20,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(flash());
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret:
+      "vvbhbvhbbvjhfbiuifijoijoifjofrjjwlkwkwjiofjwijfijiofjorfrnklfjjfijrjo",
     resave: false,
     saveUninitialized: false,
   })
